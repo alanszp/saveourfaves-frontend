@@ -1,5 +1,5 @@
 const Neighborhoods = {
-  sf: [
+  caba: [
     { name: "Mission & Bernal", key: "mission_n_bernal", image: null },
     { name: "Pacific Heights", key: "pacific_heights", image: null },
     {
@@ -39,7 +39,7 @@ const Neighborhoods = {
       image: null
     }
   ],
-  eastbay: [
+  gba: [
     { name: "Rockridge & Temescal", key: "rockridge", image: null },
     { name: "Downtown & Uptown Oakland", key: "downtown", image: null },
     { name: "Fruitvale & San Antonio", key: "fruitvale", image: null },
@@ -59,7 +59,7 @@ const Neighborhoods = {
     { name: "Hayward & Castro Valley", key: "hayward", image: null },
     { name: "Pleasanton & Livermore", key: "pleasanton", image: null }
   ],
-  southbay: [
+  mendoza: [
     { name: "San Mateo & Burlingame", key: "sanmateo", image: null },
     { name: "Daly City & South SF", key: "dalycity", image: null },
     { name: "Mountain View", key: "mountainview", image: null },
@@ -75,7 +75,7 @@ const Neighborhoods = {
     { name: "San Bruno & Millbrae", key: "sanbruno", image: null },
     { name: "Los Altos", key: "losaltos", image: null }
   ],
-  marin: [
+  cordoba: [
     { name: "Sausalito & Marin City", key: "sausalito", image: null },
     { name: "San Rafael", key: "san_rafael", image: null },
     { name: "Larkspur & Corte Madera", key: "larkspur", image: null },

@@ -1,8 +1,8 @@
 const Areas = {
-  sf: "San Francisco",
-  eastbay: "East Bay",
-  southbay: "South Bay",
-  marin: "Marin"
+  caba: "CABA",
+  gba: "GBA",
+  cordoba: "Cordoba",
+  mendoza: "Mendoza"
 };
 
 export default Areas;

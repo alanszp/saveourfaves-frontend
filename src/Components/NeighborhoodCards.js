@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography } from "antd";
 import Neighborhoods from "../CityData/Neighborhoods";
-import axios from "axios";
+import FullPlaces from "../CityData/FullPlaces";
 import { SuggestedPlaceCards } from "./SuggestedPlaceCards";
 
 const { Title } = Typography;
@@ -16,10 +16,10 @@ function AreaDropdown(props) {
         props.updateArea(newArea);
       }}
     >
-      <option value="sf">San Francisco</option>
-      <option value="eastbay">East Bay</option>
-      <option value="marin">Marin</option>
-      <option value="southbay">South Bay</option>
+      <option value="caba">CABA</option>
+      <option value="gba">GBA</option>
+      <option value="cordoba">Cordoba</option>
+      <option value="mendoza">Mendoza</option>
     </select>
   );
 }
@@ -81,30 +81,25 @@ export class NeighborhoodCards extends React.Component {
   };
   fetchSuggestionsForNeighborhood(neighborhood, ref, fetchOffset) {
     this.setState({ loading: true });
-    axios
-      .get("/api/places/by_neighborhood", {
-        params: {
-          neighborhood: neighborhood.key,
-          offset: fetchOffset
-        }
-      })
-      .then(response => {
-        const suggestions = response.data.suggestedPlaces;
-        const moreAvailable = response.data.moreAvailable;
-        const merged = (this.state.suggestedPlaces || []).concat(suggestions);
-        ref.setState((state, props) => {
-          const nextOffset = state.fetchOffset + suggestions.length;
-          return {
-            loading: false,
-            suggestedPlaces: merged,
-            fetchOffset: nextOffset,
-            moreAvailable: moreAvailable
-          };
-        });
-      })
-      .catch(error => {
-        ref.setState({ loading: false });
-      });
+
+    const start = 9 * fetchOffset;
+    const end = 9 + start;
+    const fp = FullPlaces;
+    const places = fp[neighborhood.key] || [];
+    const filteredPlaces = places.slice(start, end);
+
+    const suggestions = filteredPlaces;
+    const moreAvailable = places.length >= end;
+    const merged = (this.state.suggestedPlaces || []).concat(suggestions);
+    ref.setState((state, props) => {
+      const nextOffset = state.fetchOffset + suggestions.length;
+      return {
+        loading: false,
+        suggestedPlaces: merged,
+        fetchOffset: nextOffset,
+        moreAvailable: moreAvailable
+      };
+    });
   }
   loadMoreForCurrentNeighborhood() {
     this.fetchSuggestionsForNeighborhood(
