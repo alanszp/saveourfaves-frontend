@@ -109,6 +109,18 @@ class App extends React.Component {
                           Preguntas frecuentes
                         </Title>
                       </a>
+                      <a href="#">
+                        <Title
+                          style={{
+                            color: "white",
+                            display: "inline",
+                            marginRight: "16px"
+                          }}
+                          level={4}
+                        >
+                          Agregá tu local
+                        </Title>
+                      </a>
                       <Popover content={<ShareOptions />}>
                         <Button shape="round" className="header-button">
                           Compartí

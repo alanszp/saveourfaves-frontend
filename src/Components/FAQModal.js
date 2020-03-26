@@ -43,8 +43,9 @@ function FAQModal(props) {
 
   const consumerFAQs = [
     {
-      title: "¿Qué es Localesdetubarrio.org?",
+      title: "¿Qué es localesdetubarrio.org?",
       body:
+        "localesdetubarrio.org es una inicitaiva sin fines de lucro, amarda y gestionada por voluntarios.</br></br>" +
         'localesdetubarrio.org es un directorio virtual (100% ad honorem) en el cual los locales de barrio pueden ofrecer tarjetas de regalo ("giftcards") para que las personas hagan compras por adelantado y las retiren o consuman cuando termine la cuarentena.'
     },
     {
@@ -87,14 +88,14 @@ function FAQModal(props) {
     {
       title: "¿Cómo puedo comenzar a ofrecer tarjetas de regalo en línea?",
       body:
-        "El primer paso es consultar con tu proveedor de punto de venta o ecommerce. Muchos ofrecen sus propias funciones de tarjetas de regalo y otros se integran con proveedores externos específicos.<br></br>" +
+        "El primer paso es consultar con tu proveedor de punto de venta o ecommerce. Muchos ofrecen sus propias funciones de tarjetas de regalo y otros se integran con proveedores externos específicos.</br></br>" +
         "Para ayudarte con esto, pusimos más opciones y estamos actualizando documentos de Google para que puedas contar con más información: " +
         renderLink(
           "https://docs.google.com/document/d/1Dh3K21otWNH7LrnCJfqhwKohzPO385yVdpF6BAifrWY/edit",
           "LINK"
         ) +
-        "<br></br>" +
-        "Si estás considerando otras opciones, asegurate de que tu empresa reciba la tarifa por la tarjeta de regalo tan pronto como el cliente compre la tarjeta (de lo contrario, eso no te va a ayudar durante la crisis).<br></br>"
+        "</br></br>" +
+        "Si estás considerando otras opciones, asegurate de que tu empresa reciba la tarifa por la tarjeta de regalo tan pronto como el cliente compre la tarjeta (de lo contrario, eso no te va a ayudar durante la crisis).</br></br>"
     },
     {
       title: "¿Cómo puedo alentar a los clientes a comprar tarjetas de regalo?",
