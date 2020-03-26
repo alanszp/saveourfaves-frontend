@@ -26,7 +26,7 @@ export class CallToActionButton extends React.Component {
               window.open(place.giftCardURL);
             }}
           >
-            Hace tu compra anticipada
+            Hacé tu compra anticipada
           </Button>
         )}
         {!place.giftCardURL && (

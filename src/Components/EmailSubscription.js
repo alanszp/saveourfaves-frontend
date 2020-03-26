@@ -134,7 +134,7 @@ export class EmailSubscription extends React.Component {
           className={this.props.buttonClass}
           type="default"
         >
-          Hace tu compra anticipada
+          Hacé tu compra anticipada
         </Button>
       </Popover>
     );
