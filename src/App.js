@@ -109,7 +109,10 @@ class App extends React.Component {
                           Preguntas frecuentes
                         </Title>
                       </a>
-                      <a href="#">
+                      <a
+                        href="https://localesdetubarrio.typeform.com/to/CJpu60"
+                        target="_blank"
+                      >
                         <Title
                           style={{
                             color: "white",
@@ -211,22 +214,19 @@ class App extends React.Component {
                     <Title level={3}>3 semanas pueden cambiarlo todo</Title>
                     <p>
                       Los comercios tienen muchos costos fijos: alquiler,
-                      sueldos, seguros, servicios, y más. En la mayoría de los
-                      casos los márgenes son bajos. Según el Ministerio de
+                      sueldos, seguros, servicios, y más. Según el Ministerio de
                       Producción las PyMEs emplean el 70% de las personas en
-                      Argentina, pero el 95% no tienen acceso al crédito
-                      <sup>(1)</sup>. Se estima que un restaurant puede
-                      sobrevivir en promedio 16 días en promedio sin ingresos{" "}
-                      <sup>(2)</sup>.
+                      Argentina <sup>(1)</sup>. Se estima que un restaurant
+                      puede sobrevivir en promedio 16 días en promedio sin
+                      ingresos <sup>(2)</sup>.
                     </p>
                     <p>
-                      Fuentes:
-                      <br></br>
+                      Fuentes:&nbsp;
                       <sup>(1)</sup>{" "}
                       <a href="https://www.lanacion.com.ar/economia/empleos/el-50-de-los-empresarios-de-las-pymes-tiene-masde-60-anos-nid2151143">
                         Ministerio de Producción
                       </a>
-                      . &nbsp;<sup>(2)</sup>
+                      . <sup>(2)</sup>
                       <a href="https://www.jpmorganchase.com/corporate/institute/document/jpmc-institute-small-business-report.pdf">
                         Estudio de JP Morgan Chase
                       </a>

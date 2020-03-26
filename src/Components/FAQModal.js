@@ -77,13 +77,22 @@ function FAQModal(props) {
     {
       title: "¿Cómo puedo agregar mi local en el sitio?",
       body:
-        "Ayudanos a agregar tu local acá. Estamos abiertos a agregar más categorías de comercios si esto funciona."
+        "Ayudanos a " +
+        renderLink(
+          "https://localesdetubarrio.typeform.com/to/CJpu60",
+          "agregar tu local acá"
+        ) +
+        ". Estamos abiertos a agregar más categorías de comercios si esto funciona."
     },
     {
-      title:
-        "Mi empresa ofrece certificados de regalo, pero su sitio dice que no",
+      title: "Mi empresa ofrece tarjetas de regalo, pero su sitio dice que no",
       body:
-        "Por favor, completá el formulario con el link correcto a tu sitio o al post de red social donde expliques sobre la tarjeta de regalo así se lista en el sitio."
+        "Por favor, completá " +
+        renderLink(
+          "https://localesdetubarrio.typeform.com/to/CJpu60",
+          "este formulario"
+        ) +
+        " con el link correcto a tu sitio o al post de red social donde expliques sobre la tarjeta de regalo así se lista en el sitio."
     },
     {
       title: "¿Cómo puedo comenzar a ofrecer tarjetas de regalo en línea?",
