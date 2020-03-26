@@ -61,12 +61,12 @@ export class NeighborhoodCards extends React.Component {
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.updateWindowDimensions);
   };
-  componentDidUpdate = (prevProps, prevState) => {
+  componentDidUpdate = async (prevProps, prevState) => {
     if (prevProps.currentArea !== this.props.currentArea) {
       const newNeighborhoods = this.neighborhoodsForArea(
         this.props.currentArea
       );
-      this.setState({
+      await this.setState({
         selectedNeighborhood: newNeighborhoods[0],
         loading: true,
         suggestedPlaces: null,
@@ -82,8 +82,8 @@ export class NeighborhoodCards extends React.Component {
   fetchSuggestionsForNeighborhood(neighborhood, ref, fetchOffset) {
     this.setState({ loading: true });
 
-    const start = 9 * fetchOffset;
-    const end = 9 + start;
+    const start = fetchOffset;
+    const end = 9 + fetchOffset;
     const fp = FullPlaces;
     const places = fp[neighborhood.key] || [];
     const filteredPlaces = places.slice(start, end);
@@ -91,8 +91,9 @@ export class NeighborhoodCards extends React.Component {
     const suggestions = filteredPlaces;
     const moreAvailable = places.length > end;
     const merged = (this.state.suggestedPlaces || []).concat(suggestions);
+
     ref.setState((state, props) => {
-      const nextOffset = state.fetchOffset + suggestions.length;
+      const nextOffset = fetchOffset + suggestions.length;
       return {
         loading: false,
         suggestedPlaces: merged,
@@ -164,7 +165,7 @@ export class NeighborhoodCards extends React.Component {
             />
           </Title>
         </div>
-        {this.state.neighborhoods && (
+        {this.state.neighborhoods && this.state.neighborhoods > 1 && (
           <section
             className="neighborhood-card-container"
             style={{

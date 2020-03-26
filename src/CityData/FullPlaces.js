@@ -1,5 +1,5 @@
 const FullPlaces = {
-  mission_n_bernal: [
+  caba_restaurant: [
     {
       name: "Anchor Oyster Bar",
       address: "579 Castro Street, San Francisco",
@@ -117,9 +117,128 @@ const FullPlaces = {
         "https://lh3.googleusercontent.com/p/AF1QipOmFIi4FR6FILgGAVvbO9cBGD3S1aUPKAOhjdN0=s1600-w800",
       placeID: "ChIJcfQ5MRp-j4ARn3eA9EH16OA",
       area: "caba"
+    },
+    {
+      name: "Kin Khao",
+      address: "55 Cyril Magnin St, San Francisco",
+      giftCardURL: "https://www.narisf.com/",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://www.kinkhao.com/",
+      emailContact: "info@kinkhao.com",
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipMXFkPBu0tM0cyCWAvg1gSqXcFZxrDgFRcJPTWx=s1600-w800",
+      placeID: "ChIJn_ZxYo-AhYAR22wJt4at2K0",
+      area: "sf"
+    },
+    {
+      name: "Black Cat",
+      address: "400 Eddy Street, San Francisco",
+      giftCardURL:
+        "https://blackcatsf.cardfoundry.com/giftcards.php?action=store",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://www.blackcatsf.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipOOFa-NpeiP2mM6lzaVGs4kcujAsP4KqSrdfMF-=s1600-w800",
+      placeID: "ChIJdevbbZCAhYAReFUMOY282-Y",
+      area: "sf"
+    },
+    {
+      name: "Taqueria Castillo",
+      address: "86 McAllister St, San Francisco",
+      giftCardURL:
+        "https://www.toasttab.com/castillos-mexican-restaurant/giftcards",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://taqueria-castillo.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipMTZFA7n6WLCBi5jhMmUKSvYHQ0ABUfpho7wjOE=s1600-w800",
+      placeID: "ChIJCSgQKJuAhYARwTm9xvMuxz4",
+      area: "sf"
+    },
+    {
+      name: "Chambers",
+      address: "601 Eddy Street, San Francisco",
+      giftCardURL: "https://squareup.com/gift/7XXX69R2CFW7X/order",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://chambers-sf.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipP9kA3JCvB3Z5411FkOAIA176PpIeGI_dmQklra=s1600-w800",
+      placeID: "ChIJ70zQuZCAhYARBOYFsIfxD6U",
+      area: "sf"
+    },
+    {
+      name: "Popsons Burgers",
+      address: "998 Market St, San Francisco",
+      giftCardURL: "https://www.toasttab.com/popsons-burgers/giftcards",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: null,
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipNKM-cl0xxB7Y4vg9i-Kl0aZoDfGZtF2gUhHKbk=s1600-w800",
+      placeID: "ChIJYbpOD4WAhYARbOASyN_S8EU",
+      area: "sf"
+    },
+    {
+      name: "Equator Coffees",
+      address: "986 Market St, San Francisco",
+      giftCardURL: "https://www.equatorcoffees.com/collections/gift-cards",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://www.equatorcoffees.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipN66tvugfGEDqlG5IZB2XkLRuF7b_Z1B40Bp_2p=s1600-w800",
+      placeID: "ChIJda9ACIWAhYARt2zvIdz9I-4",
+      area: "sf"
+    },
+    {
+      name: "Philz Coffee",
+      address: "399 Golden Gate Ave, San Francisco",
+      giftCardURL: "https://www.philzcoffee.com/gift-card-store",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://www.philzcoffee.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipOeBUegfQooR-PL5E4Mmw71DbqAMK2DxkYlWjWv=s1600-w800",
+      placeID: "ChIJH7w1a5qAhYARSHYy_wjbPr4",
+      area: "sf"
+    },
+    {
+      name: "The Flying Falafel",
+      address: "1051 Market St, San Francisco",
+      giftCardURL: "https://www.toasttab.com/ff-soma-market-st/giftcards",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "https://www.flyingfalafel.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipNfMK3gEcupnWG-fX-_qezaklgViRCEojiQMsi2=s1600-w800",
+      placeID: "ChIJUURg6ISAhYARUlHS_WYfyGk",
+      area: "sf"
+    },
+    {
+      name: "Farm : Table",
+      address: "754 Post St, San Francisco",
+      giftCardURL: "https://squareup.com/gift/8Q5Q0AAWTK67H/order",
+      takeoutURL: null,
+      donationURL: null,
+      placeURL: "http://www.farmtablesf.com/",
+      emailContact: null,
+      imageURL:
+        "https://lh3.googleusercontent.com/p/AF1QipPSakN0WW_FgZILzKR4FTIcR1_vMXCyC9xXiboz=s1600-w800",
+      placeID: "ChIJWyb_ipGAhYARbaiIO1cGIrw",
+      area: "sf"
     }
   ],
-  pacific_heights: [
+  gba_restaurant: [
     {
       name: "Namu Stonepot",
       address: "553 Divisadero St, San Francisco",
@@ -241,7 +360,7 @@ const FullPlaces = {
       area: "caba"
     }
   ],
-  north_beach_n_jackson_sq: [
+  mendoza_restaurant: [
     {
       name: "Burma Superstar",
       address: "309 Clement Street, San Francisco",
@@ -361,7 +480,7 @@ const FullPlaces = {
       area: "caba"
     }
   ],
-  west_portal_n_ingleside: [
+  cordoba_restaurant: [
     {
       name: "The Slanted Door",
       address: "One Ferry Building #3, San Francisco",
