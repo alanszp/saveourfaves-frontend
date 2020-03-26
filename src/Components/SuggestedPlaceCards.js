@@ -57,12 +57,12 @@ export class SuggestedPlaceCards extends React.Component {
         {this.props.moreAvailable && (
           <div style={{ textAlign: "center" }}>
             <Button
-              className="primary-button"
+              className="secondary-button"
               shape="round"
               size="default"
               onClick={this.props.onLoadMore}
             >
-              Load More
+              Cargar más
             </Button>
           </div>
         )}

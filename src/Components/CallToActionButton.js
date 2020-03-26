@@ -8,7 +8,7 @@ export class CallToActionButton extends React.Component {
     var place = this.props.place;
     var size = this.props.size;
     const className =
-      size === "large" ? "large-primary-button" : "secondary-button";
+      size === "large" ? "large-primary-button" : "primary-button";
     return (
       <div key={place.placeID}>
         {place.giftCardURL && (
