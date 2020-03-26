@@ -91,7 +91,7 @@ class App extends React.Component {
                 <Row className="top-header">
                   <Col span={24} offset={0}>
                     <Title style={{ float: "left", color: "white" }} level={4}>
-                      SaveOurFaves
+                      <b>Locales de tu Barrio</b>
                     </Title>
                     <div style={{ float: "right" }}>
                       <a href="#">
@@ -106,12 +106,12 @@ class App extends React.Component {
                           }}
                           level={4}
                         >
-                          FAQ
+                          Preguntas frecuentes
                         </Title>
                       </a>
                       <Popover content={<ShareOptions />}>
                         <Button shape="round" className="header-button">
-                          Tell friends
+                          Compartí
                         </Button>
                       </Popover>
                     </div>
@@ -128,12 +128,12 @@ class App extends React.Component {
                     level={1}
                     style={{ color: "white", textAlign: "center" }}
                   >
-                    Your favorite Bay Area restaurant might close forever. Help
-                    save it.
+                    El restaurant de tu barrio podría cerrar para siempre.
                   </Title>
                   <div className="header-sans">
-                    Gift cards help "flatten the curve" of lost income from
-                    COVID-19.
+                    Tu compra por adelantado puede ayudar a que no cierren los
+                    locales de tu barrio por el impacto económico de la pandemia
+                    de COVID-19.
                   </div>
                 </Col>
                 <Col
@@ -178,12 +178,13 @@ class App extends React.Component {
                     xl={9}
                     style={{ textAlign: "left" }}
                   >
-                    <Title level={3}>Our duty as loyal customers</Title>
+                    <Title level={3}>Vos podes hacer la diferencia</Title>
                     <p>
-                      Our small businesses need us more than ever. Even though
-                      we can’t leave home, we can still support local
-                      restaurants by buying gift cards. It’s basically a
-                      mini-loan, so buy one now and make a plan to use it later.
+                      Los locales de tu barrio te necesitan más que nunca.
+                      Aunque no puedas salir de casa (#quedateencasa), podes
+                      apoyarlos adelantando compras para canjear cuando los
+                      locales vuelvan a abrir, y de esta forma ayudás a que
+                      puedan pagar los sueldos y otros gastos durante la crisis.
                     </p>
                   </Col>
                   <Col
@@ -195,14 +196,29 @@ class App extends React.Component {
                     xl={9}
                     style={{ textAlign: "left" }}
                   >
-                    <Title level={3}>3 weeks can kill a business</Title>
+                    <Title level={3}>3 semanas pueden cambiarlo todo</Title>
                     <p>
-                      Restaurants have tons of fixed costs: rent, labor, loan
-                      repayments, insurance, supplies, repairs – the list goes
-                      on. Even successful restaurants have razor thin margins of
-                      3-5%, and a third have struggled to pay employees at least
-                      once. The “shelter-in-place” ordinance keeping customers
-                      at home could tip the balance into bankruptcy.
+                      Los comercios tienen muchos costos fijos: alquiler,
+                      sueldos, seguros, servicios, y más. En la mayoría de los
+                      casos los márgenes son bajos. Según el Ministerio de
+                      Producción las PyMEs emplean el 70% de las personas en
+                      Argentina, pero el 95% no tienen acceso al crédito
+                      <sup>(1)</sup>. Se estima que un restaurant puede
+                      sobrevivir en promedio 16 días en promedio sin ingresos{" "}
+                      <sup>(2)</sup>.
+                    </p>
+                    <p>
+                      Fuentes:
+                      <br></br>
+                      <sup>(1)</sup>{" "}
+                      <a href="https://www.lanacion.com.ar/economia/empleos/el-50-de-los-empresarios-de-las-pymes-tiene-masde-60-anos-nid2151143">
+                        Ministerio de Producción
+                      </a>
+                      . &nbsp;<sup>(2)</sup>
+                      <a href="https://www.jpmorganchase.com/corporate/institute/document/jpmc-institute-small-business-report.pdf">
+                        Estudio de JP Morgan Chase
+                      </a>
+                      .
                     </p>
                   </Col>
                 </Row>

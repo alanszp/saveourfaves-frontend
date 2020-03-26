@@ -43,83 +43,68 @@ function FAQModal(props) {
 
   const consumerFAQs = [
     {
-      title: "What is SaveOurFaves?",
+      title: "¿Qué es Localesdetubarrio.org?",
       body:
-        "SaveOurFaves is a directory of Bay Area restaurants and coffee shops that offer online gift cards for purchase. It’s our hope that by providing this resource, we’ll be able to mobilize loyal customers to provide much-needed support for their favorite places in town. We also link to staff donation sites, if they are available."
-    },
-    {
-      title: "Why isn’t my favorite business on your site?",
-      body:
-        "Please help us add your fave Bay Area food & beverages spots " +
-        addPlaceLink("here") +
-        ". We're open to adding more small business categories if this catches on."
+        'localesdetubarrio.org es un directorio virtual (100% ad honorem) en el cual los locales de barrio pueden ofrecer tarjetas de regalo ("giftcards") para que las personas hagan compras por adelantado y las retiren o consuman cuando termine la cuarentena.'
     },
     {
       title:
-        "How else can I support our local businesses beyond purchasing a gift card?",
+        "¿De qué otra manera puedo apoyar a nuestros comercios locales más allá de comprar una tarjeta de regalo?",
       body:
-        "Delivery and pickup are great options! Some restaurants that don’t normally offer delivery have started to offer curbside pickup during the pandemic so check their websites and social media to see what’s available. <br />" +
-        "Tip generously if you can (even for delivery/pickup), since employees are doing extra work and putting their health at risk. <br />" +
-        "Encourage the government to get involved. Sign this " +
-        renderLink("http://chng.it/jM97Sbf9ct", "San Francisco petition") +
-        " to encourage lawmakers to offer emergency small business loans. Please call your US Representative and your Senators. You can be connected to the capitol switchboard at 202-224-3121. Demand that small businesses are part the federal stimulus plan."
+        "Otra opción es hacer compras a aquellos que ofrecen delivery. Algunos locales que normalmente no ofrecen entregas comenzaron a ofrecer delivery durante la pandemia, así que revisá sus sitios web y redes sociales para ver qué hay disponible. Si podés, se generoso con la propina. Los encargados del delivery están haciendo un trabajo extra y poniendo en riesgo su salud."
     },
     {
-      title: "Why is this just for the Bay Area? Can you do this for my city?",
+      title: "¿Quién construyó esto? ¿Y por qué?",
       body:
-        "As San Francisco natives, we started this project for our community. Over the past days, people have launched similar tools for their specific cities, or even nationally. Check out " +
-        renderLink("https://helpmainstreet.com/", "Help Main Street") +
-        ", " +
-        renderLink("https://givelocal.co/", "GiveLocal") +
-        ", and " +
+        "Kaitlyn y Mike Krieger: una pareja en San Francisco creó el directorio base (" +
+        renderLink("https://saveourfaves.org/", "https://saveourfaves.org/") +
+        ") que adaptamos para Argentina. Pueden contactar al grupo de voluntarios de Argentina con cualquier pregunta sobre el sitio en " +
         renderLink(
-          "https://rallyforrestaurants.com/",
-          "Rally for Restaurants"
+          "mailto:localesdetubarrio@gmail.com",
+          "localesdetubarrio@gmail.com"
         ) +
         "."
     },
     {
-      title: "Who built this? And why?",
+      title:
+        "¿Por qué es esto solo para Argentina? ¿Pueden hacer esto en mi ciudad?",
       body:
-        "We’re Kaitlyn & Mike Krieger -- a husband and wife duo in San Francisco. We’re no longer going out because of COVID-19 (San Francisco is under a “shelter in place” ordinance), so we started buying gift cards to help support our favorite cafes and restaurants during this unpredictable time. SaveOurFaves is our simple way to make it easier for people to help local businesses through this difficult time. We got help and advice from some great friends and local business owners, in particular Phil Levin, Zack Schwab, Kristen Berman, Stefanie Krieger, Melissa Dyrdahl, Laura Buhler, Paul Einbund, and Eddie Hernandez. You can contact us with any questions about the site at " +
-        renderLink("mailto:info@saveourfaves.org", "info@saveourfaves.org") +
-        " and see more about why we decided to start it " +
-        renderLink(
-          "https://medium.com/@mikekrieger/launching-saveourfaves-lets-support-restaurants-with-gift-cards-c4fb3e1828cf",
-          "here"
-        ) +
-        "."
+        "Este fue creado en base al sitio de @mikeyk presente en github. Si bien no podremos ayudar a implementar el directorio, podés consultar el back-end de la interfaz para obtener más instrucciones sobre cómo podría implementar el sitio en tu pais/ciudad. Es posible que necesitas algunos ajustes para que esto funcione de tu lado. Si necesita más ayuda, podés enviar un pedido de ayuda al repositorio de Github."
     }
   ];
   const bizFAQs = [
     {
-      title: "Why isn’t my business showing up in your search results?",
+      title: "¿Cómo puedo agregar mi local en el sitio?",
       body:
-        "Please help us add your Bay Area food/beverage business " +
-        addPlaceLink("here") +
-        ". We're open to adding more small business categories if this catches on."
+        "Ayudanos a agregar tu local acá. Estamos abiertos a agregar más categorías de comercios si esto funciona."
     },
     {
       title:
-        "My business offers gift certificates, but your site says we don’t",
-      body: "Please let us know the details " + addPlaceLink("here") + "."
+        "Mi empresa ofrece certificados de regalo, pero su sitio dice que no",
+      body:
+        "Por favor, completá el formulario con el link correcto a tu sitio o al post de red social donde expliques sobre la tarjeta de regalo así se lista en el sitio."
     },
     {
-      title:
-        "I'm running a GoFundMe for my staff, and I'd like to list it on your site",
+      title: "¿Cómo puedo comenzar a ofrecer tarjetas de regalo en línea?",
       body:
-        "Please drop us a note via email at " +
-        renderLink("mailto:info@saveourfaves.org", "info@saveourfaves.org")
+        "El primer paso es consultar con tu proveedor de punto de venta o ecommerce. Muchos ofrecen sus propias funciones de tarjetas de regalo y otros se integran con proveedores externos específicos.<br></br>" +
+        "Para ayudarte con esto, pusimos más opciones y estamos actualizando documentos de Google para que puedas contar con más información: " +
+        renderLink(
+          "https://docs.google.com/document/d/1Dh3K21otWNH7LrnCJfqhwKohzPO385yVdpF6BAifrWY/edit",
+          "LINK"
+        ) +
+        "<br></br>" +
+        "Si estás considerando otras opciones, asegurate de que tu empresa reciba la tarifa por la tarjeta de regalo tan pronto como el cliente compre la tarjeta (de lo contrario, eso no te va a ayudar durante la crisis).<br></br>"
     },
     {
-      title: "How can I start offering online gift cards?",
+      title: "¿Cómo puedo alentar a los clientes a comprar tarjetas de regalo?",
       body:
-        "The first step is to check with your POS provider. Many offer their own gift card features (e.g. Square, Toast, ShopKeep), and others integrate with specific third-party providers. If your POS provider doesn’t offer gift cards or integrate with third-party providers, there are some reasonable standalone eGift Card apps like GiftUp or GiftFly. If you’re considering other options, make sure that your business receives the fee for the gift card as soon as the customer purchases the card (otherwise that won’t help you during the crisis). Some services may also ask customers to pay an additional fee when they buy a gift card but be sure it’s a small amount."
+        "Las personas quieren apoyar a sus comercios favoritos, así que no tengas miedo de decirles que las tarjetas de regalo son importantes para tu negocio. Aprovechá tu comunidad en Facebook, Twitter e Instagram, y contactate con tus clientes leales. ¡Pediles que consideren adelantar la compra de un mes para ayudarte en medio de la crisis!"
     },
     {
-      title: "How can I encourage customers to buy gift cards?",
+      title: "Descargo de responsabilidad",
       body:
-        "People are looking for ways they can support their favorite businesses, so don’t be afraid to let them know that gift cards will help. Reach out to your community on Facebook, Twitter, and Instagram, and use your email list to get in touch with your customers. Ask them to consider buying a gift card for one month of spending to help you weather this storm and keep paying staff, so that you can continue offering great food/coffee/etc. for years to come."
+        'Somos un directorio para listar comercios en Argentina en medio de la pandemia del COVID-19. No gestionamos los servicios de tarjetas de regalo ("giftcards"), ni los pagos a los comercios. Si tenes algún problema con las tarjetas de regalo, comunicate directamente con los comercios. <b>No somos responsables de reclamos, daños u otras responsabilidades que puedan surgir.</b>'
     }
   ];
   return (
@@ -131,11 +116,11 @@ function FAQModal(props) {
       onCancel={props.onClose}
       footer={<span></span>}
     >
-      <h2>For Restaurant-goers</h2>
+      <h2>Para personas que quieran apoyar a los comercios de su barrio.</h2>
       {consumerFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
-      <h2>For Businesses</h2>
+      <h2>Para locales comerciales</h2>
       {bizFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
