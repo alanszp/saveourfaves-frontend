@@ -1,3 +1,5 @@
+import { flatMap } from "lodash";
+
 const FullPlaces = {
   caba_restaurant: [
     {
@@ -605,3 +607,15 @@ const FullPlaces = {
 };
 
 export default FullPlaces;
+
+const neighborsConfiged = Object.keys(FullPlaces);
+
+export function getByArea(area) {
+  const neighborsFromArea = neighborsConfiged.filter(n => {
+    return n.indexOf(area) > -1;
+  });
+
+  return flatMap(neighborsFromArea, function(n) {
+    return FullPlaces[n];
+  });
+}

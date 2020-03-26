@@ -1,5 +1,5 @@
 import React from "react";
-import SFPlaces from "../CityData/Places";
+import { getByArea } from "../CityData/FullPlaces";
 import Autosuggest from "react-autosuggest";
 import { LogEngagementEvent } from "../Logging";
 import { AddNewPlaceModal } from "./AddNewPlaceModal";
@@ -26,16 +26,17 @@ export class PlaceAutosuggestion extends React.Component {
     const inputLength = inputValue.length;
     if (inputLength < 3) {
       return [];
-    } else {
-      const results = SFPlaces.filter(
-        place => this.sanitizeInput(place.name).indexOf(inputValue) !== -1
-      ).slice(0, this.maxSuggestions);
-      if (results.length === 0) {
-        LogEngagementEvent("user-roadblock", "no-results");
-      }
-      results.push({ special: "letUsKnowRow" });
-      return results;
     }
+    const results = getByArea(this.props.currentArea)
+      .filter(
+        place => this.sanitizeInput(place.name).indexOf(inputValue) !== -1
+      )
+      .slice(0, this.maxSuggestions);
+    if (results.length === 0) {
+      LogEngagementEvent("user-roadblock", "no-results");
+    }
+    results.push({ special: "letUsKnowRow" });
+    return results;
   };
   getSuggestionValue = suggestion => suggestion.name || "";
   renderSuggestion = suggestion => {
@@ -120,8 +121,7 @@ export class PlaceAutosuggestion extends React.Component {
               );
               this.setState({ showAddModal: true });
             } else {
-              const key = data.suggestion.key;
-              this.props.onPlaceSelected(key);
+              this.props.onPlaceSelected(data.suggestion);
             }
           }}
           renderSuggestion={this.renderSuggestion}

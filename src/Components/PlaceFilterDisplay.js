@@ -1,8 +1,8 @@
 import React from "react";
-import axios from "axios";
 import { NearbySpots } from "./NearbySpots";
 import { PlaceResultMain } from "./PlaceResultMain";
 import { PlaceAutosuggestion } from "./PlacesAutosuggestion";
+import { find } from "lodash";
 import Areas from "../CityData/Areas";
 
 export class PlaceFilterDisplay extends React.Component {
@@ -23,38 +23,38 @@ export class PlaceFilterDisplay extends React.Component {
     }
   };
 
-  fetchPlaceInfo = (scrollElementRef, placeKey) => {
-    axios
-      .get("/api/places/detail", {
-        params: {
-          place_id: placeKey
-        }
-      })
-      .then(response => {
-        this.updateAreaFromPlace(response.data.place);
-        const place = response.data.place;
-        const suggestions = response.data.suggestedPlaces;
-        this.setState((state, props) => {
-          return { place: place, suggestedPlaces: suggestions };
-        });
-      });
+  fetchPlaceInfo = (scrollElementRef, place) => {
+    this.updateAreaFromPlace(place);
+    let suggestions = this.state.suggestedPlaces || [];
+    const placeInSuggestions = find(
+      this.state.suggestedPlaces,
+      p => p.key === place.key
+    );
+    if (!placeInSuggestions) {
+      suggestions = [place, ...suggestions];
+    }
+    this.setState((state, props) => {
+      return { place: place, suggestedPlaces: suggestions };
+    });
   };
   render() {
     return (
       <div ref={this.elementRef}>
         <PlaceAutosuggestion
-          onPlaceSelected={placeID => {
-            this.fetchPlaceInfo(this.elementRef, placeID);
+          onPlaceSelected={place => {
+            this.fetchPlaceInfo(this.elementRef, place);
           }}
           onSearchChanged={newValue => {
             if (newValue.length === 0) {
               this.setState({ place: null, suggestedPlaces: null });
             }
           }}
+          currentArea={this.props.currentArea}
         />
         <div style={{ textAlign: "left" }}>
           <PlaceResultMain place={this.state.place} />
           {this.state.suggestedPlaces &&
+            false &&
             this.state.suggestedPlaces.length > 0 && (
               <NearbySpots suggestedPlaces={this.state.suggestedPlaces} />
             )}

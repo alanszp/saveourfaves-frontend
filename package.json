@@ -11,6 +11,7 @@
     "drag-scroll-provider": "^1.0.6",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "react": "^16.13.0",

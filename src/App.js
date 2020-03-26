@@ -146,7 +146,10 @@ class App extends React.Component {
                       <AreaContext.Consumer>
                         {value => {
                           return (
-                            <PlaceFilterDisplay updateArea={value.updateArea} />
+                            <PlaceFilterDisplay
+                              updateArea={value.updateArea}
+                              currentArea={value.currentArea}
+                            />
                           );
                         }}
                       </AreaContext.Consumer>
