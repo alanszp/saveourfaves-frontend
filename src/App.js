@@ -223,6 +223,23 @@ class App extends React.Component {
                   </Col>
                 </Row>
               </div>
+              <div
+                style={{
+                  maxWidth: "1100px",
+                  margin: "10px auto",
+                  fontSize: "12px"
+                }}
+              >
+                Disclaimer: Somos un directorio para listar comercios en
+                Argentina en medio de la pandemia del COVID-19. No gestionamos
+                los servicios de tarjetas de regalo ("giftcards"), ni los pagos
+                a los comercios. Si tenes algún problema con las tarjetas de
+                regalo, comunicate directamente con los comercios.{" "}
+                <b>
+                  No somos responsables de reclamos, daños u otras
+                  responsabilidades que puedan surgir.
+                </b>
+              </div>
             </Row>
           </div>
         </div>

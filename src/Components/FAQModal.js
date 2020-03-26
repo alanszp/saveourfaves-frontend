@@ -69,7 +69,7 @@ function FAQModal(props) {
       title:
         "¿Por qué es esto solo para Argentina? ¿Pueden hacer esto en mi ciudad?",
       body:
-        "Este fue creado en base al sitio de @mikeyk presente en github. Si bien no podremos ayudar a implementar el directorio, podés consultar el back-end de la interfaz para obtener más instrucciones sobre cómo podría implementar el sitio en tu pais/ciudad. Es posible que necesitas algunos ajustes para que esto funcione de tu lado. Si necesita más ayuda, podés enviar un pedido de ayuda al repositorio de Github."
+        "Este fue creado en base al sitio de @mikeyk presente en github. Si bien no podremos ayudar a implementar el directorio, podés consultar el back-end de la interfaz para obtener más instrucciones sobre cómo podría implementar el sitio en tu pais/ciudad. Es posible que necesites algunos ajustes para que esto funcione de tu lado. Si necesitas más ayuda, podés enviar un pedido de ayuda al repositorio de Github."
     }
   ];
   const bizFAQs = [
