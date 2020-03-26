@@ -89,7 +89,7 @@ export class NeighborhoodCards extends React.Component {
     const filteredPlaces = places.slice(start, end);
 
     const suggestions = filteredPlaces;
-    const moreAvailable = places.length >= end;
+    const moreAvailable = places.length > end;
     const merged = (this.state.suggestedPlaces || []).concat(suggestions);
     ref.setState((state, props) => {
       const nextOffset = state.fetchOffset + suggestions.length;
