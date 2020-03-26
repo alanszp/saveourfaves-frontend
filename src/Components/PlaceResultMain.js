@@ -75,35 +75,6 @@ export class PlaceResultMain extends React.Component {
           </Row>
           <Row style={{ minHeight: 80 }} align="bottom">
             <Col
-              xs={24}
-              sm={14}
-              md={14}
-              lg={14}
-              xl={14}
-              style={{ position: "relative", top: 12 }}
-            >
-              {place.giftCardURL && (
-                <p>
-                  {place.name} offers gift cards online. Consider prepaying for
-                  a month of spending.
-                </p>
-              )}
-              {!place.giftCardURL && place.emailContact && (
-                <p>Consider prepaying for a month of spending.</p>
-              )}
-              {!place.giftCardURL && !place.emailContact && (
-                <p>
-                  Do they have a link to sell gift cards?{" "}
-                  <a
-                    className="app-link"
-                    onClick={() => this.setState({ showAddModal: true })}
-                  >
-                    Point us to it here.
-                  </a>
-                </p>
-              )}
-            </Col>
-            <Col
               className="flex-vertical"
               xs={24}
               sm={10}

@@ -1,5 +1,6 @@
 import React from "react";
 import { getByArea } from "../CityData/FullPlaces";
+import Areas from "../CityData/Areas";
 import Autosuggest from "react-autosuggest";
 import { LogEngagementEvent } from "../Logging";
 import { AddNewPlaceModal } from "./AddNewPlaceModal";
@@ -43,15 +44,13 @@ export class PlaceAutosuggestion extends React.Component {
     if (suggestion.special) {
       return (
         <div>
-          <div>Don't see your fave?</div>
+          <div>No encontrás tu local favorio?</div>
           <div>
             <a
-              onClick={() => {
-                this.setState({ showAddModal: false });
-              }}
+              href="mailto:localesdetubarrio@gmail.com"
               className="primary-link"
             >
-              Let us know
+              Mandanos un mail
             </a>
           </div>
         </div>
@@ -91,7 +90,8 @@ export class PlaceAutosuggestion extends React.Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "‍Search for a Bay Area restaurant, coffee...",
+      placeholder:
+        "‍Encontra tu local favorito en " + Areas[this.props.currentArea],
       value,
       onChange: this.onChange,
       onFocus: event => {
