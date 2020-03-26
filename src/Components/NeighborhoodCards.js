@@ -126,8 +126,8 @@ export class NeighborhoodCards extends React.Component {
                   ? " neighborhood-card-image-selected"
                   : "")
               }
-              onClick={event => {
-                this.setState({
+              onClick={async event => {
+                await this.setState({
                   selectedNeighborhood: neighborhood,
                   fetchOffset: 0,
                   suggestedPlaces: null
